@@ -25,5 +25,13 @@ const calculate = () => {
   resultArea.innerHTML = `${result.toFixed(2)} zł`;
 }
 
-secondInput.addEventListener('change', calculate)
-firstInput.addEventListener('change', calculate)
+const checkInputs = () => {
+  if(firstInput.value !== '' && secondInput.value != ''){
+    calculate();
+  }else{
+    resultArea.textContent = '...'
+  }
+}
+
+firstInput.addEventListener('change' , checkInputs)
+secondInput.addEventListener('change' , checkInputs)
