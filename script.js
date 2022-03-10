@@ -26,7 +26,7 @@ const calculate = () => {
 }
 
 const checkInputs = () => {
-  if(firstInput.value !== '' && secondInput.value != ''){
+  if(firstInput.value !== '' && secondInput.value !== ''){
     calculate();
   }else{
     resultArea.textContent = '...'
